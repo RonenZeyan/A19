@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="light">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8" />
@@ -7,11 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Remote Team Building Platform</title>
     
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Tailwind CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"> -->
 </head>
 
-<body class="dark:bg-gray-700 dark:text-white p-4">
+<body class="dark:bg-gray-700">
     <div class="max-w-[1000px] w-full mx-auto relative">
         <div class="bg-blue-700 dark:bg-blue-500 text-white p-4 flex justify-between">
             <button class="block sm:hidden" onclick="toggleMenu()">
@@ -35,8 +36,7 @@
                 <button onclick="setView('Social Interaction Features')">Social Interaction</button>
             </div>
             <div>
-                <button class="dark:hidden block" onclick="toggle()">Dark</button>
-                <button class="hidden dark:block" onclick="toggle()">Light</button>
+                <button id="bgButton" onclick="toggle()">dark</button>
             </div>
         </div>
         <div class="py-4">
@@ -45,10 +45,18 @@
     </div>
 
     <script>
+
+    tailwind.config = { 
+        darkMode: 'class', 
+    } 
+
+        bgButton = document.getElementById('bgButton');
         // set theme
         const toggle = () => {
+            //check if the text in bgButton (id) is dark if yes change to light else set dark
             document.documentElement.classList.toggle("dark")
-            document.documentElement.classList.toggle("light")            
+            bgButton.innerText = document.documentElement.classList.contains('dark') ? "light" : "dark" 
+            // document.documentElement.classList.toggle("light")            
         }
 
         // view
