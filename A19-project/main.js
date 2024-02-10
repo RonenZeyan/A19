@@ -1,6 +1,13 @@
 
 let bgButton = document.getElementById('bgButton');
 let menuToggle = document.getElementById('menuToggle');
+let searchButton = document.getElementById('searchBut');
+let searchList = document.getElementById('searchList');
+let searchInput = document.getElementById('searchInput');
+
+searchButton.addEventListener('click',function(){
+    searchInput.value === 'room' ? searchList.classList.toggle('hidden'): null
+});
 
 // set theme
 const toggle = () => {
@@ -43,6 +50,7 @@ bgButton.addEventListener('click',function(){
 document.querySelectorAll('.VirtualGames').forEach(function(element) {
 element.addEventListener('click',function(){
     setView('Virtual Games');
+
 });
 })
 document.querySelectorAll('.cooperativeChallenge').forEach(function(element) {
@@ -55,3 +63,7 @@ element.addEventListener('click',function(){
     setView('Social Interaction');
 });
 })
+
+
+
+
