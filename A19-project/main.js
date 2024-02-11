@@ -3,10 +3,14 @@ let bgButton = document.getElementById('bgButton');
 let menuToggle = document.getElementById('menuToggle');
 let searchButton = document.getElementById('searchBut');
 let searchList = document.getElementById('searchList');
+let NotFoundSearch = document.getElementById('NotFoundSearch');
 let searchInput = document.getElementById('searchInput');
+let virtualGameContent = document.getElementById('virtualGameContent')
+let home = document.getElementById('Home')
 
+//Currently the search list displays data in case enter the word "room" to search. otherwise, displayed " not found"
 searchButton.addEventListener('click',function(){
-    searchInput.value === 'room' ? searchList.classList.toggle('hidden'): null
+    searchInput.value === 'room' ? searchList.classList.toggle('hidden'): NotFoundSearch.classList.toggle('hidden')
 });
 
 // set theme
@@ -19,9 +23,10 @@ const toggle = () => {
 
 // view
 const setView = (v) => {
-    document.querySelector('h1').innerText = v
-    var randomColor = Math.floor(Math.random()*16777215).toString(16)
-    document.querySelector('h1').style.borderBottom = `10px solid #${randomColor}`
+    // document.querySelector('h1').innerText = v
+    // var randomColor = Math.floor(Math.random()*16777215).toString(16)
+    // document.querySelector('h1').style.borderBottom = `10px solid #${randomColor}`
+    // virtualGameContent.classList.contains('hidden') ? virtualGameContent.classList.add('hidden') : null
     toggleMenu(true)
 }
 
@@ -49,6 +54,7 @@ bgButton.addEventListener('click',function(){
 });
 document.querySelectorAll('.VirtualGames').forEach(function(element) {
 element.addEventListener('click',function(){
+
     setView('Virtual Games');
 
 });
@@ -62,6 +68,17 @@ document.querySelectorAll('.SocialInteraction').forEach(function(element) {
 element.addEventListener('click',function(){
     setView('Social Interaction');
 });
+})
+
+document.getElementById('virtual').addEventListener('click',()=>{
+    document.getElementById('mainPage').classList.add('hidden');
+    virtualGameContent.classList.remove('hidden')
+})
+
+home.addEventListener('click',()=>{
+    virtualGameContent.classList.add('hidden');
+    document.getElementById('mainPage').classList.contains('hidden') ? document.getElementById('mainPage').classList.toggle('hidden') : null
+    
 })
 
 

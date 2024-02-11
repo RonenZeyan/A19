@@ -8,65 +8,12 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
 
-  <body class="dark:bg-gray-700">
-    <div id="content" class="max-w-[100vw] w-full relative">
-      <div class="bg-blue-700 dark:bg-blue-500 text-white p-4 flex justify-between">
-          <button id="menuToggle" class="block sm:hidden">
-              <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
-                  <path fill="#ffffff"
-                      d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
-              </svg>
-              <svg class="hidden" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512">
-                  <path fill="#ffffff"
-                      d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
-              </svg>
-          </button>
-          <div class="absolute top-[56px] left-0 p-3 hidden w-full" id="ddMenu">
-              <button class="VirtualGames block py-1 px-2">Virtual Games</button>
-              <button class="cooperativeChallenge block py-1 px-2">Cooperative Challenges</button>
-              <button class="SocialInteraction block py-1 px-2">Social Interaction</button>
-          </div>
-          <div class="justify-start gap-4 hidden sm:flex">
-              <button class="VirtualGames">Virtual Games</button>
-              <button class="cooperativeChallenge">Cooperative Challenges</button>
-              <button class="SocialInteraction">Social Interaction</button>
-          </div>
-          <div>
-              <button id="bgButton">dark</button>
-          </div>
-      </div>
-      <!-- <div class="bg-slate-500"><img class="w-[100%] h-[80vh]" src="background.jpg" alt="team image">
-        <h1 class="text-3xl text-center">Remote Team Building Platform</h1>
-      </div> -->
-    </div>
-     <div class="relative">
-        <img src="background.jpg" alt="Item Image" class="h-[100vh] w-[100vw] opacity-85">
-        <div class="absolute inset-0 flex justify-center">
-            <h1 class="text-white text-4xl font-bold pt-10"><p class="shadow-lg">TeamPower : Unite , Play , Connect</p></h1></div>
-            <div class="absolute top-20 right-5 font-bold rounded p-2 bg-white hover:bg-gray-300"><button>+ create new room</button></div>
-            <div class="absolute top-36 left-5 text-white flex flex-col justify-evenly">
-                 <div class="text-gray-600 font-bold flex bg-white rounded-2xl">
-                    <div>
-                        <input id="searchInput" class="w-96 h-7 rounded-2xl px-3 py-3 focus:outline-none" type="text" placeholder="Search Room"><button class="p-1" id="searchBut"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-                        </svg>
-                        </button>
-                        <div id="searchList" class="flex flex-col overflow-y-scroll h-56 hidden">
-                            <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">israel room</button>
-                            <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">apple room</button>
-                            <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">our team room</button>
-                            <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">braude room</button>
-                            <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">microsoft room</button>
-                            <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">samsung room</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-          </div>
-      </div>
+    <body class="dark:bg-gray-700">
 
-      <footer id="content" class="max-w-[100vw] w-full relative">
-        <div class="bg-blue-700 dark:bg-blue-500 text-white p-4 flex justify-between">
+        <!-- header -->
+
+        <div id="content" class="max-w-[100vw] w-full relative">
+        <div class="bg-blue-500 dark:bg-gray-500 text-white p-1 flex justify-between">
             <button id="menuToggle" class="block sm:hidden">
                 <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
                     <path fill="#ffffff"
@@ -77,19 +24,128 @@
                         d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
                 </svg>
             </button>
-            <div class="absolute bottom-0 pb-0 left-0 p-3 hidden w-full" id="ddMenu">
-                <button class="VirtualGames block py-1 px-2">Contact us</button>
-                <button class="cooperativeChallenge block py-1 px-2">about us</button>
+            <div class="absolute top-[56px] left-0 p-3 hidden w-full" id="ddMenu">
+                <img class="w-[20%] h-7" src="logo.png" alt="logo">
+                <button class="VirtualGames block py-1 px-2">Virtual Games</button>
+                <button class="cooperativeChallenge block py-1 px-2">Cooperative Challenges</button>
                 <button class="SocialInteraction block py-1 px-2">Social Interaction</button>
             </div>
-            <div class="justify-start gap-4 hidden sm:flex">
-                <button class="VirtualGames">Contact us</button>
-                <button class="cooperativeChallenge">about us</button>
+            <div class="justify-start items-center gap-4 hidden sm:flex">
+                <img class="w-[14%] h-full p-2" src="haya.png" alt="logo">
+                <button id="Home" class="Home">Home</button>
+                <button id="virtual" class="VirtualGames">Virtual Games</button>
+                <button class="cooperativeChallenge">Cooperative Challenges</button>
                 <button class="SocialInteraction">Social Interaction</button>
             </div>
+            <div class="flex items-center">
+                <button id="bgButton">dark</button>
+            </div>
         </div>
-    </footer>
+        <!-- <div class="bg-slate-500"><img class="w-[100%] h-[80vh]" src="background.jpg" alt="team image">
+            <h1 class="text-3xl text-center">Remote Team Building Platform</h1>
+        </div> -->
+        </div>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+        <!-- content of main page  -->
+
+        <div id="mainPage" class="hidden relative h-[100vh]" style="background-image: url(background.jpg); background-size:cover;">
+            <!-- <img src="background.jpg" alt="Item Image" class="h-[100vh] w-[100vw] opacity-85"> -->
+            <div class="text-center sm: flex-col gap-10 md:absolute inset-0 flex">
+                <div><h1 class="text-white text-4xl font-bold pt-10"><p class="shadow-lg">TeamPower : Unite, Play, Connect</p></h1></div>
+                <div class="sm: m-auto md:absolute top-24 right-5 font-bold rounded p-2 bg-white hover:bg-gray-400"><button>+ create new room</button></div>
+                <div class="sm: m-auto md:absolute top-36 left-5 text-white flex flex-col justify-evenly">
+                    <div class="text-gray-600 font-bold flex bg-white rounded-2xl">
+                        <div>
+                            <input id="searchInput" class="w-96 h-7 rounded-2xl p-3 focus:outline-none" type="text" placeholder="Search Room"><button class="p-1" id="searchBut"><svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                            </button>
+                            <!-- in case entered "room" word in search -->
+                            <div id="searchList" class="flex flex-col overflow-y-scroll h-56 hidden">
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">israel room</button>
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">apple room</button>
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">our team room</button>
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">braude room</button>
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">microsoft room</button>
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">samsung room</button>
+                            </div>
+                            <!-- in  case user entered any other word -->
+                            <div id="NotFoundSearch" class="hidden">
+                                <button class="disabled:">not found</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- content of virtual game -->
+        <div id="virtualGameContent" class="relative h-[100vh] flex mx-10 my-16">
+            <div class="bg-black w-1/4 overflow-hidden overflow-y-scroll">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user1">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user2">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <!-- <img src="girlPic.jpg" alt="user4"> -->
+            </div>
+            <div class="bg-blue-800 w-3/4 mx-4">
+                <img class="h-[100vh] w-[100vw]" src="game.png" alt="game">
+            </div>
+        </div>
+
+        <!-- footer -->
+
+        <footer id="content" class="max-w-[100vw] w-full relative">
+            <div class="bg-blue-500 dark:bg-gray-500 text-white p-4">
+                <!-- <button id="menuToggle" class="block sm:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                        <path fill="#ffffff"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                    <svg class="hidden" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512">
+                        <path fill="#ffffff"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                </button>
+                <div class="absolute bottom-0 pb-0 left-0 p-3 hidden w-full" id="ddMenu">
+                    <button class="VirtualGames block py-1 px-2">Contact us</button>
+                    <button class="cooperativeChallenge block py-1 px-2">about us</button>
+                    <button class="SocialInteraction block py-1 px-2">Social Interaction</button>
+                </div> -->
+                <div class="flex flex-col md:flex-row md:justify-between gap-10 items-center">
+                    <div>
+                        <button class="VirtualGames">Contact Us | </button>
+                        <button class="cooperativeChallenge">About Us | </button>
+                        <button class="SocialInteraction">FAQs</button>
+                    </div>
+                    <div class="cursor-pointer flex gap-5">
+                        <svg 
+                          xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                        </svg>
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                        </svg>
+                        <svg 
+                           xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                            d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                        </svg>
+                    </div>
+                </div>            
+            </div>
+        </footer>
+
+        <script type="module" src="./main.js"></script>
+        
+    </body>
 </html>
