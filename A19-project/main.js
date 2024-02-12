@@ -9,10 +9,27 @@ let virtualGameContent = document.getElementById('virtualGameContent')
 let socialInteractionContent = document.getElementById('socialInteractionContent')
 let createRoomContent = document.getElementById('createRoomContent')
 let home = document.getElementById('Home')
+let cnt = 0;
+
+
+let RoomsArray = ['israel room','apple room','our team room','braude room','microsoft room','samsung room'];
 
 //Currently the search list displays data in case enter the word "room" to search. otherwise, displayed " not found"
 searchButton.addEventListener('click',function(){
-    searchInput.value === 'room' ? searchList.classList.toggle('hidden'): NotFoundSearch.classList.toggle('hidden')
+    // searchInput.value === 'room' ? searchList.classList.toggle('hidden'): NotFoundSearch.classList.toggle('hidden')
+    cnt=0;
+    searchList.innerHTML = ''
+    searchList.classList.toggle('hidden')
+    RoomsArray.forEach((val)=>{
+        if(val.includes(searchInput.value)){
+            searchList.innerHTML+= `<button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">${val}</button>
+            `;
+            cnt = cnt+1;
+        }
+    })
+    if(cnt==0){
+        searchList.innerHTML = `<button class="disabled:">not found</button>` 
+    }
 });
 
 // set theme
@@ -93,14 +110,21 @@ document.getElementById('create').addEventListener('click',()=>{
     socialInteractionContent.classList.add('hidden')
 })
 
-home.addEventListener('click',()=>{
+const HomeCode = function(){
     createRoomContent.classList.add('hidden');
     virtualGameContent.classList.add('hidden');
     socialInteractionContent.classList.add('hidden')
     document.getElementById('mainPage').classList.contains('hidden') ? document.getElementById('mainPage').classList.toggle('hidden') : null
+}
+
+// home.addEventListener('click',()=>{
+//     createRoomContent.classList.add('hidden');
+//     virtualGameContent.classList.add('hidden');
+//     socialInteractionContent.classList.add('hidden')
+//     document.getElementById('mainPage').classList.contains('hidden') ? document.getElementById('mainPage').classList.toggle('hidden') : null
     
-})
-
-
+// })
+home.addEventListener('click',HomeCode);
+document.getElementById('logo').addEventListener('click',HomeCode);
 
 

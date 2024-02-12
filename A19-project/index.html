@@ -31,7 +31,7 @@
                 <button class="SocialInteraction block py-1 px-2">Social Interaction</button>
             </div>
             <div class="justify-start items-center gap-4 hidden sm:flex">
-                <img class="w-[14%] h-full p-2" src="haya.png" alt="logo">
+                <img id="logo" class="w-[14%] h-full p-2 cursor-pointer" src="haya.png" alt="logo">
                 <button id="Home" class="Home">Home</button>
                 <button id="virtual" class="VirtualGames">Virtual Games</button>
                 <button class="cooperativeChallenge">Cooperative Challenges</button>
@@ -62,17 +62,17 @@
                             </button>
                             <!-- in case entered "room" word in search -->
                             <div id="searchList" class="flex flex-col overflow-y-scroll h-56 hidden">
-                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">israel room</button>
+                                <!-- <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">israel room</button>
                                 <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">apple room</button>
                                 <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">our team room</button>
                                 <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">braude room</button>
                                 <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">microsoft room</button>
-                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">samsung room</button>
+                                <button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">samsung room</button> -->
                             </div>
                             <!-- in  case user entered any other word -->
-                            <div id="NotFoundSearch" class="hidden">
+                            <!-- <div id="NotFoundSearch" class="hidden">
                                 <button class="disabled:">not found</button>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
                 </div>
@@ -80,58 +80,57 @@
         </div>
 
         <!-- content of virtual game -->
-        <div id="virtualGameContent" class="hidden relative h-[100vh] flex mx-10 my-16">
-            <div class="bg-black w-1/4 overflow-hidden overflow-y-scroll">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user1">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user2">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <img class="w-3/4 h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
-                <!-- <img src="girlPic.jpg" alt="user4"> -->
+        <div id="virtualGameContent" class="flex sm:flex-col md:flex-row hidden relative h-[90vh] mx-10 md:my-16 sm:my-4">
+            <div class="flex sm:h-1/5 sm:w-[100%] sm:flex-row md:w-1/4 md:h-full md:flex-col sm:overflow-x-scroll bg-black overflow-hidden md:overflow-y-scroll">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user1">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user2">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
+                <img class="sm:w-2/6 sm:h-3/4 md:w-3/4 md:h-2/6 m-auto my-2" src="girlPic.jpg" alt="user3">
             </div>
-            <div class="bg-blue-800 w-3/4 mx-4">
-                <img class="h-[100vh] w-[100vw]" src="game.png" alt="game">
+            <div class="sm:h-4/5 sm:w-[100%] md:w-3/4 md:h-full bg-blue-800 w-3/4">
+                <img class="sm:h-[100%] md:h-[100%] sm:w-[100vw]" src="game.png" alt="game">
             </div>
         </div>
 
-<!-- content of Social Interaction -->
-<div id="socialInteractionContent" class="hidden relative h-[100vh] flex mx-10 my-16">
-    <div class="bg-gray-300 w-1/4 overflow-hidden overflow-y-scroll">
-        <button class="w-1/2 h-15 mx-20 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">+</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user1</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user2</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user3</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user4</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user5</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user6</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user7</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user8</button>
-        <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">All Users</button>
-        <!-- <img src="girlPic.jpg" alt="user4"> -->
-    </div>
-    <div class="bg-amber-100 dark:bg-gray-300 w-3/4 mx-4 flex flex-col ">
-        <div class="bg-blue-400 dark:bg-gray-400 px-4 py-2 rounded-b-lg text-center"> user1</div>
-        <div class="flex flex-col py-6">
-            <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 bg-green-300 self-start">Hi Alex,How are you ?</div>
-            <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 self-end">Hi Naomi, I am fine and you ?</div>
-            <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 bg-green-300 self-start">Fine thank you, do you come to the college today ?</div>
-            <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 self-end">Yes, and you ?</div>
-            <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 bg-green-300 self-start">Yes, so we will meet there.</div>
-            <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 self-end">Of course, see you soon.</div>
-        </div>        
-        <div class="bg-gray-100 px-4 py-2 rounded-b-lg mt-auto">
-            <input type="text" placeholder="Type your message..." class="w-full border rounded-lg px-2 py-1 focus:outline-none focus:ring focus:border-blue-300">
+    <!-- content of Social Interaction -->
+    <div id="socialInteractionContent" class="hidden relative h-[100vh] flex mx-10 my-16">
+        <div class="bg-gray-300 w-1/4 overflow-hidden overflow-y-scroll">
+            <button class="w-1/2 h-15 mx-20 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">+</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user1</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user2</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user3</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user4</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user5</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user6</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user7</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user8</button>
+            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">All Users</button>
+            <!-- <img src="girlPic.jpg" alt="user4"> -->
         </div>
+        <div class="bg-amber-100 dark:bg-gray-300 w-3/4 mx-4 flex flex-col ">
+            <div class="bg-blue-400 dark:bg-gray-400 px-4 py-2 rounded-b-lg text-center"> user1</div>
+            <div class="flex flex-col py-6">
+                <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 bg-green-300 self-start">Hi Alex,How are you ?</div>
+                <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 self-end">Hi Naomi, I am fine and you ?</div>
+                <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 bg-green-300 self-start">Fine thank you, do you come to the college today ?</div>
+                <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 self-end">Yes, and you ?</div>
+                <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 bg-green-300 self-start">Yes, so we will meet there.</div>
+                <div class="bg-gray-100 px-4 py-2 my-2 rounded-lg w-1/2 self-end">Of course, see you soon.</div>
+            </div>        
+            <div class="bg-gray-100 px-4 py-2 rounded-b-lg mt-auto">
+                <input type="text" placeholder="Type your message..." class="w-full border rounded-lg px-2 py-1 focus:outline-none focus:ring focus:border-blue-300">
+            </div>
+        </div>
+        
+        
     </div>
-    
-    
-</div>
 
 
     <!-- we have to complete it -->
