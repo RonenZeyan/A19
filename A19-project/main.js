@@ -91,22 +91,42 @@ element.addEventListener('click',function(){
 
 document.getElementById('virtual').addEventListener('click',()=>{
     document.getElementById('mainPage').classList.add('hidden');
-    virtualGameContent.classList.remove('hidden')
-    socialInteractionContent.classList.add('hidden')
+    virtualGameContent.classList.remove('hidden');
+    socialInteractionContent.classList.add('hidden');
     createRoomContent.classList.add('hidden');
 })
 
 document.getElementById('social').addEventListener('click',()=>{
     document.getElementById('mainPage').classList.add('hidden');
     virtualGameContent.classList.add('hidden');
-    socialInteractionContent.classList.remove('hidden')
+    socialInteractionContent.classList.remove('hidden');
     createRoomContent.classList.add('hidden');
 })
 
+document.getElementById('createRoom').addEventListener('click',()=>{
+    createRoomContent.classList.remove('hidden')
+    document.getElementById('searchInput').classList.add('pointer-events-none')
+    document.getElementById('searchBut').classList.add('cursor-not-allowed')
+    document.getElementById('searchBut').setAttribute('disabled','true')
+    virtualGameContent.classList.add('hidden')
+    socialInteractionContent.classList.add('hidden')
+})
+
 document.getElementById('create').addEventListener('click',()=>{
-    createRoomContent.classList.remove('hidden');
-    document.getElementById('mainPage').classList.add('hidden');
-    virtualGameContent.classList.add('hidden');
+    document.getElementById('searchInput').classList.remove('pointer-events-none')
+    document.getElementById('searchBut').classList.remove('cursor-not-allowed')
+    document.getElementById('searchBut').removeAttribute('disabled')
+    createRoomContent.classList.add('hidden')
+    virtualGameContent.classList.add('hidden')
+    socialInteractionContent.classList.add('hidden')
+})
+
+document.getElementById('cancel').addEventListener('click',()=>{
+    document.getElementById('searchInput').classList.remove('pointer-events-none')
+    document.getElementById('searchBut').classList.remove('cursor-not-allowed')
+    document.getElementById('searchBut').removeAttribute('disabled')
+    createRoomContent.classList.add('hidden')
+    virtualGameContent.classList.add('hidden')
     socialInteractionContent.classList.add('hidden')
 })
 
@@ -117,13 +137,6 @@ const HomeCode = function(){
     document.getElementById('mainPage').classList.contains('hidden') ? document.getElementById('mainPage').classList.toggle('hidden') : null
 }
 
-// home.addEventListener('click',()=>{
-//     createRoomContent.classList.add('hidden');
-//     virtualGameContent.classList.add('hidden');
-//     socialInteractionContent.classList.add('hidden')
-//     document.getElementById('mainPage').classList.contains('hidden') ? document.getElementById('mainPage').classList.toggle('hidden') : null
-    
-// })
 home.addEventListener('click',HomeCode);
 document.getElementById('logo').addEventListener('click',HomeCode);
 
