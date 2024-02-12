@@ -25,20 +25,22 @@
                 </svg>
             </button>
             <div class="absolute top-[56px] left-0 p-3 hidden w-full" id="ddMenu">
-                <img class="w-[20%] h-7" src="logo.png" alt="logo">
+                <img class="w-[20%] h-7" src="haya.png" alt="logo">
+                <button id="Home" class="Home font-bold">Home</button>
                 <button class="VirtualGames block py-1 px-2">Virtual Games</button>
                 <button class="cooperativeChallenge block py-1 px-2">Cooperative Challenges</button>
                 <button class="SocialInteraction block py-1 px-2">Social Interaction</button>
             </div>
             <div class="justify-start items-center gap-4 hidden sm:flex">
                 <img id="logo" class="w-[14%] h-full p-2 cursor-pointer" src="haya.png" alt="logo">
-                <button id="Home" class="Home">Home</button>
-                <button id="virtual" class="VirtualGames">Virtual Games</button>
-                <button class="cooperativeChallenge">Cooperative Challenges</button>
-                <button id="social" class="SocialInteraction">Social Interaction</button>
+                <button id="Home" class="Home font-bold">Home</button>
+                <button id="virtual" class="VirtualGames font-bold hidden">Virtual Games</button>
+                <button class="cooperativeChallenge font-bold hidden">Cooperative Challenges</button>
+                <button id="social" class="SocialInteraction font-bold hidden">Social Interaction</button>
             </div>
-            <div class="flex items-center">
-                <button id="bgButton">dark</button>
+            <div id="navEnd" class="flex items-center gap-4">
+                <button id="exitRoomBut" class="bg-red-700 rounded px-2 py-0 w-[100%] hidden font-bold border">Exit Room</button>
+                <button class="mr-3 font-bold" id="bgButton">dark</button>
             </div>
         </div>
         <!-- <div class="bg-slate-500"><img class="w-[100%] h-[80vh]" src="background.jpg" alt="team image">
@@ -101,17 +103,17 @@
 
     <!-- content of Social Interaction -->
     <div id="socialInteractionContent" class="hidden relative h-[100vh] flex mx-10 my-16">
-        <div class="bg-gray-300 w-1/4 overflow-hidden overflow-y-scroll">
-            <button class="w-1/2 h-15 mx-20 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">+</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user1</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user2</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user3</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user4</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user5</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user6</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user7</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user8</button>
-            <button class="w-full h-15 font-bold m-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">All Users</button>
+        <div class="bg-gray-300 w-1/4 overflow-hidden overflow-y-scroll p-1">
+            <button class="w-1/2 h-15 mx-20 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">+</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user1</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user2</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user3</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user4</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user5</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user6</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user7</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">user8</button>
+            <button class="w-full h-15 font-bold m-auto my-1 rounded-2xl text-center p-2 bg-white border-black dark:bg-gray-400 dark:text-black dark:hover:bg-gray-500 hover:bg-gray-400">All Users</button>
             <!-- <img src="girlPic.jpg" alt="user4"> -->
         </div>
         <div class="bg-amber-100 dark:bg-gray-300 w-3/4 mx-4 flex flex-col ">
@@ -140,15 +142,13 @@
             </div>
             <div class="text-center">Enter Password :</div>
             <div class="bg-gray-100 px-4 py-2 rounded-b-lg ">
-                <input type="text" placeholder="Type Password" class=" text-center border rounded-lg px-2 py-1 focus:outline-none focus:ring focus:border-blue-300">
+                <input type="password" placeholder="Type Password" class=" text-center border rounded-lg px-2 py-1 focus:outline-none focus:ring focus:border-blue-300">
             </div>
             <div class="flex justify-between mt-5 px-3">
                 <button id="create" class="px-2 py-1 bg-blue-400 rounded border border-black ">Create</button>
                 <button id="cancel" class="px-2 py-1 bg-red-400 rounded border border-black ">Cancel</button>
             </div>
         </div> 
-
-
 
 
         <!-- footer -->

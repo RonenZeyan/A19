@@ -14,15 +14,27 @@ let cnt = 0;
 
 let RoomsArray = ['israel room','apple room','our team room','braude room','microsoft room','samsung room'];
 
+searchInput.addEventListener('click',function(){
+    searchList.innerHTML = ''
+    searchList.classList.toggle('hidden')
+    RoomsArray.forEach((val)=>{
+            searchList.innerHTML+= `<button class="roomBut bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">${val}</button>
+            `;
+        })
+    addEventsToRoomButtons();
+})
+
 //Currently the search list displays data in case enter the word "room" to search. otherwise, displayed " not found"
 searchButton.addEventListener('click',function(){
     // searchInput.value === 'room' ? searchList.classList.toggle('hidden'): NotFoundSearch.classList.toggle('hidden')
+    if(searchInput.value!=='')
+    {
     cnt=0;
     searchList.innerHTML = ''
     searchList.classList.toggle('hidden')
     RoomsArray.forEach((val)=>{
         if(val.includes(searchInput.value)){
-            searchList.innerHTML+= `<button class="bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">${val}</button>
+            searchList.innerHTML+= `<button class="roomBut bg-white p-2 rounded-2xl border border-gray-300 hover:bg-gray-100">${val}</button>
             `;
             cnt = cnt+1;
         }
@@ -30,6 +42,7 @@ searchButton.addEventListener('click',function(){
     if(cnt==0){
         searchList.innerHTML = `<button class="disabled:">not found</button>` 
     }
+}
 });
 
 // set theme
@@ -140,4 +153,31 @@ const HomeCode = function(){
 home.addEventListener('click',HomeCode);
 document.getElementById('logo').addEventListener('click',HomeCode);
 
+function addEventToButton (butt){
+    butt.addEventListener('click',()=>{
+        console.log('hello')
+    document.getElementById('mainPage').classList.add('hidden');
+    virtualGameContent.classList.add('hidden');
+    socialInteractionContent.classList.remove('hidden');
+    createRoomContent.classList.add('hidden');
+    document.getElementById('virtual').classList.remove('hidden');
+    document.getElementById('social').classList.remove('hidden');
+    document.getElementById('exitRoomBut').classList.remove('hidden');
+    });
+}
 
+function addEventsToRoomButtons(){
+    document.querySelectorAll('.roomBut').forEach((val)=>{
+        addEventToButton(val);
+    });
+}
+
+function displayNavButtons(){
+    document.getElementById('virtual').classList.add('hidden');
+    document.getElementById('social').classList.add('hidden');
+    document.getElementById('exitRoomBut').classList.add('hidden');
+    HomeCode()
+}
+
+
+exitRoomBut.addEventListener('click',displayNavButtons);
