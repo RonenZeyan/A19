@@ -6,6 +6,8 @@ let searchList = document.getElementById('searchList');
 let NotFoundSearch = document.getElementById('NotFoundSearch');
 let searchInput = document.getElementById('searchInput');
 let virtualGameContent = document.getElementById('virtualGameContent')
+let socialInteractionContent = document.getElementById('socialInteractionContent')
+let createRoomContent = document.getElementById('createRoomContent')
 let home = document.getElementById('Home')
 
 //Currently the search list displays data in case enter the word "room" to search. otherwise, displayed " not found"
@@ -73,10 +75,28 @@ element.addEventListener('click',function(){
 document.getElementById('virtual').addEventListener('click',()=>{
     document.getElementById('mainPage').classList.add('hidden');
     virtualGameContent.classList.remove('hidden')
+    socialInteractionContent.classList.add('hidden')
+    createRoomContent.classList.add('hidden');
+})
+
+document.getElementById('social').addEventListener('click',()=>{
+    document.getElementById('mainPage').classList.add('hidden');
+    virtualGameContent.classList.add('hidden');
+    socialInteractionContent.classList.remove('hidden')
+    createRoomContent.classList.add('hidden');
+})
+
+document.getElementById('create').addEventListener('click',()=>{
+    createRoomContent.classList.remove('hidden');
+    document.getElementById('mainPage').classList.add('hidden');
+    virtualGameContent.classList.add('hidden');
+    socialInteractionContent.classList.add('hidden')
 })
 
 home.addEventListener('click',()=>{
+    createRoomContent.classList.add('hidden');
     virtualGameContent.classList.add('hidden');
+    socialInteractionContent.classList.add('hidden')
     document.getElementById('mainPage').classList.contains('hidden') ? document.getElementById('mainPage').classList.toggle('hidden') : null
     
 })
