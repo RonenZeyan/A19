@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Tailwind</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body class="bg-blue-100 dark:bg-gray-700">
+
+    <div class="flex flex-col min-h-screen">
+        <!-- header -->
+        <div id="content" class="max-w-[100vw] w-full relative">
+            <div class="bg-blue-500 dark:bg-gray-500 text-white p-1 flex justify-between">
+                <button id="menuToggle" class="block sm:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 448 512">
+                        <path fill="#ffffff"
+                            d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+                    </svg>
+                    <svg class="hidden" xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 384 512">
+                        <path fill="#ffffff"
+                            d="M342.6 150.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L192 210.7 86.6 105.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L146.7 256 41.4 361.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L192 301.3 297.4 406.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L237.3 256 342.6 150.6z" />
+                    </svg>
+                </button>
+                <div class="absolute top-[56px] left-0 p-3 hidden w-full" id="ddMenu">
+                    <img class="w-[20%] h-7" src="haya.png" alt="logo">
+                    <button id="Home" class="Home font-bold">Home</button>
+                    <button class="font-bold"><a href="usersTable.html">employees</a></button>
+                    <button class="font-bold"><a href="missionstable.html">missions</a></button>
+                    <button class="VirtualGames block py-1 px-2">Virtual Games</button>
+                    <button class="cooperativeChallenge block py-1 px-2">Cooperative Challenges</button>
+                    <button class="SocialInteraction block py-1 px-2">Social Interaction</button>
+                </div>
+                <div class="justify-start items-center gap-4 hidden sm:flex">
+                    <img id="logo" class="w-[14%] h-full p-2 cursor-pointer" src="haya.png" alt="logo">
+                    <button id="Home" class="Home font-bold">Home</button>
+                    <button class="font-bold"><a href="UserAcNewMission.html">New Missions</a></button>
+                    <button class="font-bold"><a href="UserAcExistingMission.html">Existing Missions</a></button>
+                </div>
+                <div id="navEnd" class="flex items-center gap-4">
+                    <button id="exitRoomBut" class="bg-red-700 rounded px-2 py-2 w-[100%] font-bold border"><a href="index.html">Logout</a></button>
+                    <button class="mr-3 font-bold" id="bgButton">dark</button>
+                </div>
+            </div>
+            <!-- <div class="bg-slate-500"><img class="w-[100%] h-[80vh]" src="background.jpg" alt="team image">
+                <h1 class="text-3xl text-center">Remote Team Building Platform</h1>
+            </div> -->
+        </div>
+
+            <!-- content of main page  -->
+
+        <div class="flex-1 m-5" style="background-image: url(adhamBG.jpeg); background-size: cover; background-repeat: no-repeat; background-position: center;">
+            <h1 class="font-bold text-3xl text-center py-3 ">Existing Missions</h1>
+            <div class="flex justify-center sm:items-center md:flex-row sm:flex-col py-5 gap-1">
+                <div class="flex items-center gap-2">
+                <label for="searchBy" class="font-bold">searchBy:</label>
+                <select class="p-1 border rounded-xl border-black" id="searchBy" name="searchBy">
+                    <option value="missionID">missionID</option>
+                    <option value="missionDescription">Description</option>
+                    <option value="status">status</option>
+                </select>
+                </div>
+                <div class="md:contents sm:flex sm:flex-col sm:items-center sm:gap-3">
+                    <input class="p-1 border rounded-xl w-2/5 border-black" id="searchText" placeholder="search" type="text">
+                    <button id="searchBut" class="rounded-full bg-gray-300 border-2 px-2 border-cyan-600 font-bold">search</button>
+                </div>
+            </div>
+            <table id="employeeTable" class="rounded-lg m-auto border-collapse border border-slate-400 bg-white bg-opacity-50">
+            </table>
+
+        </div>
+
+            <!-- footer -->
+
+            <footer id="content" class="m-auto max-w-[100vw] w-full relative">
+                    <div class="bg-blue-500 dark:bg-gray-500 text-white p-4">
+                        <div class="flex flex-col md:flex-row md:justify-between gap-10 items-center">
+                            <div>
+                                <button class="VirtualGames">Contact Us | </button>
+                                <button class="cooperativeChallenge">About Us | </button>
+                                <button class="SocialInteraction">FAQs</button>
+                            </div>
+                            <div class="cursor-pointer flex gap-5">
+                                <svg 
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                                </svg>
+                                <svg
+                                    xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+                                </svg>
+                                <svg 
+                                xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                    d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z" />
+                                </svg>
+                            </div>
+                        </div>            
+                    </div>
+            </footer>
+    </div>
+
+    <script src="darkMode.js"></script>
+    <script>
+
+
+        let users;
+        let loginUsers;
+        let Missions;
+        const showModalBtn = document.getElementById('showModalBtn');
+        const modalContent = document.getElementById('modalContent');
+        const closeModalBtn = document.getElementById('closeModalBtn');
+        const addModalBtn = document.getElementById('addModalBtn');
+        const employeeTable = document.getElementById('employeeTable');
+
+        document.addEventListener('DOMContentLoaded',function(){
+            users = JSON.parse(localStorage.getItem('users'));
+            loginUsers = JSON.parse(localStorage.getItem('LoginPassword'));
+            Missions = JSON.parse(localStorage.getItem('missions'));
+            if(!Missions)
+            {
+                Missions={'missions':[]};
+                localStorage.setItem('missions', JSON.stringify(Missions));
+            }
+            else
+            {
+            addRowTotable()
+            }
+
+            if(!loginUsers)
+            {
+                loginUsers={"users":[]};
+                localStorage.setItem('LoginPassword', JSON.stringify(loginUsers));
+            }
+        })
+
+        let addRowTotable = function(myobject = null){
+            const storedUsers = JSON.parse(localStorage.getItem('users'));
+            let missions = JSON.parse(localStorage.getItem('missions'));
+            employeeTable.innerHTML = `<thead class="sm:hidden md:contents"><tr>
+                <th class="border border-slate-300 px-5">mission ID</th>
+                <th class="border border-slate-300 px-5">mission Date</th>
+                <th class="border border-slate-300 px-5">End Date</th>
+                <th class="border border-slate-300 px-5">Misson description</th>
+                <th class="border border-slate-300 px-5">Status</th>
+                <th class="border border-slate-300 px-5">Accept Mission</th>
+            </tr></thead>`;
+            if(myobject){
+                missions=myobject
+            }
+            missions.missions.forEach((element,idx) => {
+            if(element.status==="proccessing" &&element.employeeID==localStorage.getItem('loggedUserID')){
+                let row = `<tbody><tr class="md:contents sm:flex sm:flex-col text-center font-bold">
+                <td class="p-3 border border-slate-300">${element.missionID}</td><td class="border border-slate-300">${element.createdDate}</td><td class="border border-slate-300">${element.endDate}</td><td class="border border-slate-300 px-8">${element.missionDescription}</td><td class="border rounded border-slate-300 p-2 text-yellow-500">${element.status}</td><td class="border rounded border-slate-300 p-2"><button class="bg-gray-300 p-2 rounded-xl" onclick="selectedItemInTable(${element.missionID})">completed</button>
+                </td></tr></tbody>`
+                employeeTable.innerHTML+=row
+            }
+            else if(element.status==="finished" &&element.employeeID==localStorage.getItem('loggedUserID')){
+                let row = `<tbody><tr class="md:contents sm:flex sm:flex-col text-center font-bold">
+                <td class="p-3 border border-slate-300">${element.missionID}</td><td class="border border-slate-300">${element.createdDate}</td><td class="border border-slate-300">${element.endDate}</td><td class="border border-slate-300 px-8">${element.missionDescription}</td><td class="border rounded border-slate-300 p-2 text-green-700">${element.status}</td><td class="border rounded border-slate-300 p-2"><img class="m-auto w-[50px]" src="finishMission.png" alt="finishedMissionPicture">
+                </td></tr></tbody>`
+                employeeTable.innerHTML+=row
+            } 
+
+            });
+        }
+
+        function selectedItemInTable(element){
+            
+            Missions.missions[element].status ="finished"
+            console.log(Missions.missions[element].status)
+            localStorage.setItem('missions', JSON.stringify(Missions));
+            addRowTotable()
+            // localStorage.setItem('selectedEmployee', JSON.stringify(element));
+        }
+        document.getElementById("searchBut").addEventListener('click',searchMission)
+        function searchMission(){
+        searchType = searchBy.value
+        searchContent = searchText.value
+        console.log(searchType)
+        console.log(searchContent)
+        if(searchContent==="")
+            addRowTotable(null)
+        let myobject = JSON.parse(localStorage.getItem('missions')); 
+        myobject = myobject.missions.filter(element => element[searchType].toString().includes(searchContent));
+        let mission = {"missions":myobject} //convert to object type 
+        addRowTotable(mission)
+        }
+
+    </script>
+</body>
+
+</html>
